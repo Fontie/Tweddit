@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "TweetService.Controllers.TweetController",
+    "Method": "PostTweet",
+    "RelativePath": "api/tweets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tweet",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TweetService.Controllers.TweetController",
+    "Method": "GetTweets",
+    "RelativePath": "api/tweets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
