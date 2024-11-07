@@ -3,9 +3,13 @@
 #Set Minikube's docker environment
 minikube stop
 
-minikube start
+minikube start --drive=docker
+
+kubectl get nodes
 
 & minikube -p minikube docker-env | Invoke-Expression
+
+minikube status
 
 kubectl apply -f ./kube/frontend-deployment.yaml       
 kubectl apply -f ./kube/tweetservice-deployment.yaml
