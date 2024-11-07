@@ -1,0 +1,38 @@
+# .github/workflows/deploy.yml
+name: CI/CD Pipeline to Minikube
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker for Minikube
+        run: |
+          curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+          chmod +x minikube
+          sudo mv minikube /usr/local/bin/
+          minikube start --driver=none  # Adjust driver if needed
+          eval $(minikube docker-env)
+
+      - name: Build and Tag Docker Images
+        run: |
+          docker build -t frontend:latest ./twedditfront
+          docker build -t tweetservice:latest ./TweetService
+          docker build -t notifservice:latest ./NotificationService
+
+      - name: Apply Kubernetes Manifests
+        env:
+          KUBECONFIG: /home/runner/.kube/config
+        run: |
+          kubectl apply -f kube/frontend-deployment.yaml
+          kubectl apply -f kube/tweetservice-deployment.yaml
+          kubectl apply -f kube/notifservice-deployment.yaml
+          kubectl apply -f k8s/api-gateway.yaml

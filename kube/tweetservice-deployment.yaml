@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tweetservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tweetservice
+  template:
+    metadata:
+      labels:
+        app: tweetservice
+    spec:
+      containers:
+        - name: tweetservice
+          image: tweetservice:latest
+          ports:
+            - containerPort: 5001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tweetservice
+spec:
+  selector:
+    app: tweetservice
+  ports:
+    - protocol: TCP
+      port: 5001
+      targetPort: 5001
+  type: ClusterIP

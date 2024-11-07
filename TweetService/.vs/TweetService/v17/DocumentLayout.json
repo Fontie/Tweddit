@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\",
+  "WorkspaceRootPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\indiviueel\\tweddit\\tweetservice\\controllers\\tweetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\tweetservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\tweetservice\\controllers\\tweetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|solutionrelative:controllers\\tweetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\indiviueel\\tweddit\\tweetservice\\tweetservice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\tweetservice\\tweetservice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|solutionrelative:tweetservice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\indiviueel\\tweddit\\tweetservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\tweetservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\indiviueel\\tweddit\\tweetservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\tweetservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,28 +30,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-31T14:24:30.732Z",
+              "DocumentIndex": 0,
+              "Title": "dockerfile",
+              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\dockerfile",
+              "RelativeDocumentMoniker": "dockerfile",
+              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\dockerfile",
+              "RelativeToolTip": "dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-07T16:30:00.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-31T14:24:30.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TweetController.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\Controllers\\TweetController.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Controllers\\TweetController.cs",
               "RelativeDocumentMoniker": "Controllers\\TweetController.cs",
-              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\Controllers\\TweetController.cs",
+              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Controllers\\TweetController.cs",
               "RelativeToolTip": "Controllers\\TweetController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwA8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -56,23 +72,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TweetService",
-              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\TweetService.csproj",
+              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\TweetService.csproj",
               "RelativeDocumentMoniker": "TweetService.csproj",
-              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\TweetService.csproj",
+              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\TweetService.csproj",
               "RelativeToolTip": "TweetService.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-31T14:25:32.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T14:25:32.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Indiviueel\\tweddit\\TweetService\\Program.cs",
+              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
