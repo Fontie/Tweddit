@@ -36,3 +36,6 @@ name: Build Docker image for API Gateway
     run: |
       docker build -t localhost:5000/api-gateway:latest ./api-gateway
       docker push localhost:5000/api-gateway:latest  # Push image to local registry
+
+
+      justsomething
