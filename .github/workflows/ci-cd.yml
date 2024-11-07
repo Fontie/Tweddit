@@ -1,62 +1,39 @@
-# .github/workflows/deploy.yml
 name: CI/CD Pipeline
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger on pushes to the 'main' branch
   pull_request:
     branches:
-      - main
+      - main  # Trigger on pull requests to 'main'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-and-push:
+    runs-on: ubuntu-latest  # GitHub Actions will run on an Ubuntu runner
 
     steps:
-    - name: Checkout code
+    - name: Checkout the repository
       uses: actions/checkout@v2
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
-
-    - name: Log in to DockerHub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-
-    - name: Install Minikube
+    - name: Build Docker image for frontend
       run: |
-        curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-        chmod +x minikube
-        sudo mv minikube /usr/local/bin/
-
-    - name: Start Minikube with Docker Driver
+        cd twedditfront
+        docker build -t localhost:4000/Drayma/frontend:latest .
+        docker push localhost:4000/Drayma/frontend:latest
+    - name: Build Docker image for API Gateway
       run: |
-        minikube start --driver=docker
-
-    - name: Expose Minikube Kubernetes API (if using tunnel)
-      run: |
-        minikube tunnel
-
-    - name: Build and push Docker images for frontend and API gateway
-      run: |
-        cd frontend
-        docker build -t your-dockerhub-username/frontend:latest .
-        docker push your-dockerhub-username/frontend:latest
         cd ../api-gateway
-        docker build -t your-dockerhub-username/api-gateway:latest .
-        docker push your-dockerhub-username/api-gateway:latest
-
-    - name: Set up kubectl for Minikube
+        docker build -t localhost:5000/Drayma/api-gateway:latest .
+        docker push localhost:5000/Drayma/api-gateway:latest
+    - name: Build Docker image for tweet service
       run: |
-        minikube kubectl -- get pods
-
-    - name: Deploy to Minikube
+        cd ../NotificationService
+        docker build -t localhost:5001/Drayma/notifiservice:latest .
+        docker push localhost:5001/Drayma/notifiservice:latest
+    - name: Build Docker image for notification service
       run: |
-          kubectl apply -f kube/frontend-deployment.yaml
-          kubectl apply -f kube/tweetservice-deployment.yaml
-          kubectl apply -f kube/notifservice-deployment.yaml
-          kubectl apply -f kube/api-gateway.yaml
+        cd ../TweetService
+        docker build -t localhost:5002/Drayma/tweetservice:latest .
+        docker push localhost:5002/Drayma/tweetservice:latest
 
