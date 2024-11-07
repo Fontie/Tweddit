@@ -19,23 +19,23 @@ jobs:
     - name: Build Docker image for frontend
       run: |
         cd twedditfront
-        docker build -t frontend:latest .
-        docker push frontend:latest
+        docker build -t localhost:5000/frontend:latest .
+        docker push localhost:5000/frontend:latest
     - name: Build Docker image for API Gateway
       run: |
         cd ApiGateway
-        docker build -t api-gateway:latest .
-        docker push api-gateway:latest
+        docker build -t localhost:5000/api-gateway:latest .
+        docker push localhost:5000/api-gateway:latest
     - name: Build Docker image for tweet service
       run: |
         cd TweetService
-        docker build -t tweetservice:latest .
-        docker push tweetservice:latest
+        docker build -t localhost:5000/tweetservice:latest .
+        docker push localhost:5000/tweetservice:latest
     - name: Build Docker image for notification service
       run: |
         cd NotificationService
-        docker build -t notifiservice:latest .
-        docker push notifiservice:latest
+        docker build -t localhost:5000/notifiservice:latest .
+        docker push localhost:5000/notifiservice:latest
     - name: Deploy to kube
       run: |
         ./deploy-to-minikube.ps1
