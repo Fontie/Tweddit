@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: frontend:latest  # Image tag matches the one built in GitHub Actions
+          image: frontend:latest  # remember 2 spaces or crash!1!
           imagePullPolicy: IfNotPresent  
           ports:
             - containerPort: 80
