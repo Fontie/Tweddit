@@ -6,6 +6,7 @@
       class="tweet-textarea"
     ></textarea>
     <button @click="postTweet" class="tweet-button">Tweet</button>
+    <button @click="postTweet" class="tweet-button">Tweet</button>
   </div>
 
   <h2>Notifications</h2>
