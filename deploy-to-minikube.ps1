@@ -32,7 +32,7 @@ kubectl expose pod $frontPodName --type=NodePort --name=frontend-service
 $minikubeIp = minikube ip
 $nodePort = kubectl get svc frontend-service -o jsonpath='{.spec.ports[0].nodePort}'
 
-$serviceUrl = "http://$minikubeIp:$nodePort"
+$serviceUrl = "http://$($minikubeIp):$($nodePort)"
 Write-Output "CHECK THIS LINK!!!!: $serviceUrl"
 
 
