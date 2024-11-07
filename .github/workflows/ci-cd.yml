@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest  # GitHub Actions will run on an Ubuntu runner
+    runs-on: self-hosted  # GitHub Actions will run on an Ubuntu runner
 
     steps:
     - name: Checkout the repository
@@ -23,20 +23,19 @@ jobs:
         docker push localhost:5000/frontend:latest
     - name: Build Docker image for API Gateway
       run: |
-        cd ../api-gateway
+        cd ApiGateway
         docker build -t localhost:5000/api-gateway:latest .
         docker push localhost:5000/api-gateway:latest
     - name: Build Docker image for tweet service
       run: |
-        cd ../NotificationService
-        docker build -t localhost:5000/notifiservice:latest .
-        docker push localhost:5000/notifiservice:latest
-    - name: Build Docker image for notification service
-      run: |
-        cd ../TweetService
+        cd TweetService
         docker build -t localhost:5000/tweetservice:latest .
         docker push localhost:5000/tweetservice:latest
-    - name: deploy kube
+    - name: Build Docker image for notification service
+      run: |
+        cd NotificationService
+        docker build -t localhost:5000/notifiservice:latest .
+        docker push localhost:5000/notifiservice:latest
+    - name: Deploy to kube
       run: |
         ./deploy-to-minikube.ps1
-
