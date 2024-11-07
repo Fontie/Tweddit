@@ -9,9 +9,19 @@ kubectl get nodes
 
 minikube status
 
-kubectl apply -f ./kube/frontend-deployment.yaml       
-kubectl apply -f ./kube/tweetservice-deployment.yaml
-kubectl apply -f ./kube/notifservice-deployment.yaml
+docker build -t localhost:5000/frontend:latest .
+kubectl apply -f ./kube/frontend-deployment.yaml   
+
+docker build -t localhost:5000/api-gateway:latest .
 kubectl apply -f ./kube/api-gateway.yaml
+
+docker build -t localhost:5000/tweetservice:latest .
+kubectl apply -f ./kube/tweetservice-deployment.yaml
+
+docker build -t localhost:5000/notifiservice:latest .
+kubectl apply -f ./kube/notifservice-deployment.yaml
+
+
+
 
 #kubectl expose pod frontend-77658c48c-gk48z --type=NodePort --name=frontend-service
