@@ -19,21 +19,21 @@ jobs:
     - name: Build Docker image for frontend
       run: |
         cd twedditfront
-        docker build -t localhost:4000/Drayma/frontend:latest .
-        docker push localhost:4000/Drayma/frontend:latest
+        docker build -t localhost:4000/drayma/frontend:latest .
+        docker push localhost:4000/drayma/frontend:latest
     - name: Build Docker image for API Gateway
       run: |
         cd ../api-gateway
-        docker build -t localhost:5000/Drayma/api-gateway:latest .
-        docker push localhost:5000/Drayma/api-gateway:latest
+        docker build -t localhost:5000/drayma/api-gateway:latest .
+        docker push localhost:5000/drayma/api-gateway:latest
     - name: Build Docker image for tweet service
       run: |
         cd ../NotificationService
-        docker build -t localhost:5001/Drayma/notifiservice:latest .
-        docker push localhost:5001/Drayma/notifiservice:latest
+        docker build -t localhost:5001/drayma/notifiservice:latest .
+        docker push localhost:5001/drayma/notifiservice:latest
     - name: Build Docker image for notification service
       run: |
         cd ../TweetService
-        docker build -t localhost:5002/Drayma/tweetservice:latest .
-        docker push localhost:5002/Drayma/tweetservice:latest
+        docker build -t localhost:5002/drayma/tweetservice:latest .
+        docker push localhost:5002/drayma/tweetservice:latest
 
