@@ -1,8 +1,6 @@
 #!/bin/bash
 
 #Set Minikube's docker environment
-minikube stop
-
 minikube start --drive=docker
 
 kubectl get nodes
