@@ -36,4 +36,7 @@ jobs:
         cd NotificationService
         docker build -t localhost:5000/notifiservice:latest .
         docker push localhost:5000/notifiservice:latest
+    - name: Deploy to kube
+      run: |
+        ./deploy-to-minikube.sh
 
