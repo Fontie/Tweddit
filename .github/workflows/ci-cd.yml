@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest  # GitHub Actions will run on an Ubuntu runner
+    runs-on: self-hosted  # GitHub Actions will run on an Ubuntu runner
 
     steps:
     - name: Checkout the repository
