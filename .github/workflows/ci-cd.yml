@@ -38,5 +38,6 @@ jobs:
         docker push localhost:5000/notifiservice:latest
     - name: Deploy to kube
       run: |
+        chmod +x ./deploy-to-minikube.sh
         ./deploy-to-minikube.sh
 
