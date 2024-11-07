@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Set Minikube's docker environment
-eval $(minikube -p minikube docker-env)
+& minikube -p minikube docker-env | Invoke-Expression
 
 #Pull images from the local registry
 docker pull localhost:4000/frontend:latest
