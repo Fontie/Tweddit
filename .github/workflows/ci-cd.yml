@@ -3,36 +3,37 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      
-main  # Trigger on pushes to the 'main' branch
-pull_request:
-  branches:
-main  # Trigger on pull requests to 'main'
+      - main  # Trigger on pushes to the 'main' branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to 'main'
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest  # GitHub Actions will run on an Ubuntu runner
 
     steps:
-    
-name: Checkout the repository
-    uses: actions/checkout@v2
+    - name: Checkout the repository
+      uses: actions/checkout@v2
 
-    
-name: Set up Docker for local registry
-    run: 
-      # Set Docker environment to use your local registry (localhost:5000)
-      docker tag frontend:latest localhost:5000/frontend:latest
-      docker tag api-gateway:latest localhost:5000/api-gateway:latest
+    - name: Build Docker image for frontend
+      run: |
+        cd twedditfront
+        docker build -t localhost:5000/drayma/frontend:latest .
+        docker push localhost:5000/drayma/frontend:latest
+    - name: Build Docker image for API Gateway
+      run: |
+        cd ../api-gateway
+        docker build -t localhost:5000/drayma/api-gateway:latest .
+        docker push localhost:5000/drayma/api-gateway:latest
+    - name: Build Docker image for tweet service
+      run: |
+        cd ../NotificationService
+        docker build -t localhost:5000/drayma/notifiservice:latest .
+        docker push localhost:5000/drayma/notifiservice:latest
+    - name: Build Docker image for notification service
+      run: |
+        cd ../TweetService
+        docker build -t localhost:5000/drayma/tweetservice:latest .
+        docker push localhost:5000/drayma/tweetservice:latest
 
-    
-name: Build Docker image for frontend
-    run: |
-      docker build -t localhost:5000/frontend:latest ./frontend
-      docker push localhost:5000/frontend:latest  # Push image to local registry
-
-    
-name: Build Docker image for API Gateway
-    run: |
-      docker build -t localhost:5000/api-gateway:latest ./api-gateway
-      docker push localhost:5000/api-gateway:latest  # Push image to local registry
