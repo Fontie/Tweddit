@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: self-hosted  # GitHub Actions will run on an Ubuntu runner
+    runs-on: ubuntu-latest  # GitHub Actions will run on an Ubuntu runner
 
     steps:
     - name: Checkout the repository
@@ -19,24 +19,24 @@ jobs:
     - name: Build Docker image for frontend
       run: |
         cd twedditfront
-        docker build -t localhost:5000/frontend:latest .
-        docker push localhost:5000/frontend:latest
+        docker build -t localhost:5000/drayma/frontend:latest .
+        docker push localhost:5000/drayma/frontend:latest
     - name: Build Docker image for API Gateway
       run: |
-        cd ApiGateway
-        docker build -t localhost:5000/api-gateway:latest .
-        docker push localhost:5000/api-gateway:latest
+        cd ../api-gateway
+        docker build -t localhost:5000/drayma/api-gateway:latest .
+        docker push localhost:5000/drayma/api-gateway:latest
     - name: Build Docker image for tweet service
-      run: 
-        cd TweetService
-        docker build -t localhost:5000/tweetservice:latest .
-        docker push localhost:5000/tweetservice:latest
+      run: |
+        cd ../NotificationService
+        docker build -t localhost:5000/drayma/notifiservice:latest .
+        docker push localhost:5000/drayma/notifiservice:latest
     - name: Build Docker image for notification service
       run: |
-        cd NotificationService
-        docker build -t localhost:5000/notifiservice:latest .
-        docker push localhost:5000/notifiservice:latest
-    - name: Deploy to kube
+        cd ../TweetService
+        docker build -t localhost:5000/drayma/tweetservice:latest .
+        docker push localhost:5000/drayma/tweetservice:latest
+    - name: deploy kube
       run: |
         ./deploy-to-minikube.ps1
 
