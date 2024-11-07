@@ -27,7 +27,7 @@ jobs:
         docker build -t localhost:5000/api-gateway:latest .
         docker push localhost:5000/api-gateway:latest
     - name: Build Docker image for tweet service
-      run: |
+      run: 
         cd TweetService
         docker build -t localhost:5000/tweetservice:latest .
         docker push localhost:5000/tweetservice:latest
