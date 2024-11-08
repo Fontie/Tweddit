@@ -12,23 +12,22 @@ minikube image load registry:2
 
 minikube status
 
-cd ./twedditfront
-Write-Output "Current path: $(Get-Location)"
+cd ./kube
 #docker build .
 #minikube image load localhost:5000/frontend:latest
-kubectl apply -f ./kube/frontend-deployment.yaml   
+kubectl apply -f ./frontend-deployment.yaml   
 
 #docker build -t localhost:5000/api-gateway:latest .
 #minikube image load localhost:5000/api-gateway:latest
-kubectl apply -f ./kube/api-gateway.yaml
+kubectl apply -f ./api-gateway.yaml
 
 #docker build -t localhost:5000/tweetservice:latest .
 #minikube image load localhost:5000/tweetservice:latest
-kubectl apply -f ./kube/tweetservice-deployment.yaml
+kubectl apply -f ./tweetservice-deployment.yaml
 
 #docker build -t localhost:5000/notifiservice:latest .
 #minikube image load localhost:5000/notifiservice:latest
-kubectl apply -f ./kube/notifservice-deployment.yaml
+kubectl apply -f ./notifservice-deployment.yaml
 
 $frontPodName = $(kubectl get pods -l app=frontend -o jsonpath='{.items[0].metadata.name}')
 
