@@ -3,9 +3,9 @@
 #Set Minikube's docker environment
 #minikube delete
 
-minikube start --driver=docker
+#minikube start --driver=docker
 
-kubectl get nodes
+#kubectl get nodes
 
 & minikube -p minikube docker-env | Invoke-Expression
 
