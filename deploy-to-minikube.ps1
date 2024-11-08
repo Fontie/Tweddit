@@ -12,20 +12,20 @@
 minikube status
 
 cd ./twedditfront
-docker build .
-minikube image load localhost:5000/frontend:latest
+#docker build .
+#minikube image load localhost:5000/frontend:latest
 kubectl apply -f ./kube/frontend-deployment.yaml   
 
-docker build -t localhost:5000/api-gateway:latest .
-minikube image load localhost:5000/api-gateway:latest
+#docker build -t localhost:5000/api-gateway:latest .
+#minikube image load localhost:5000/api-gateway:latest
 kubectl apply -f ./kube/api-gateway.yaml
 
-docker build -t localhost:5000/tweetservice:latest .
-minikube image load localhost:5000/tweetservice:latest
+#docker build -t localhost:5000/tweetservice:latest .
+#minikube image load localhost:5000/tweetservice:latest
 kubectl apply -f ./kube/tweetservice-deployment.yaml
 
-docker build -t localhost:5000/notifiservice:latest .
-minikube image load localhost:5000/notifiservice:latest
+#docker build -t localhost:5000/notifiservice:latest .
+#minikube image load localhost:5000/notifiservice:latest
 kubectl apply -f ./kube/notifservice-deployment.yaml
 
 $frontPodName = $(kubectl get pods -l app=frontend -o jsonpath='{.items[0].metadata.name}')

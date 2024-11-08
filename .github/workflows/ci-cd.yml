@@ -19,21 +19,25 @@ jobs:
     - name: Build Docker image for frontend
       run: |
         cd twedditfront
+        & minikube -p minikube docker-env | Invoke-Expression
         docker build --no-cache -t localhost:5000/frontend:latest .
         docker push localhost:5000/frontend:latest
     - name: Build Docker image for API Gateway
       run: |
         cd ApiGateway
+        & minikube -p minikube docker-env | Invoke-Expression
         docker build --no-cache -t localhost:5000/api-gateway:latest .
         docker push localhost:5000/api-gateway:latest
     - name: Build Docker image for tweet service
       run: |
         cd TweetService
+        & minikube -p minikube docker-env | Invoke-Expression
         docker build --no-cache -t localhost:5000/tweetservice:latest .
         docker push localhost:5000/tweetservice:latest
     - name: Build Docker image for notification service
       run: |
         cd NotificationService
+        & minikube -p minikube docker-env | Invoke-Expression
         docker build --no-cache -t localhost:5000/notifiservice:latest .
         docker push localhost:5000/notifiservice:latest
     - name: Deploy to kube
