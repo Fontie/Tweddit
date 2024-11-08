@@ -11,7 +11,7 @@ kubectl get nodes
 
 minikube status
 
-cd /twedditfront
+cd ./twedditfront
 docker build -t --no-cache localhost:5000/frontend:latest .
 minikube image load localhost:5000/frontend:latest
 kubectl apply -f ./kube/frontend-deployment.yaml   
