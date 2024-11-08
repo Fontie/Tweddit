@@ -14,11 +14,11 @@ minikube status
 
 cd ./kube
 #docker build .
-#minikube image load localhost:5000/frontend:latest
+minikube image load localhost:5000/frontend:latest
 kubectl apply -f ./frontend-deployment.yaml   
 
 #docker build -t localhost:5000/api-gateway:latest .
-#minikube image load localhost:5000/api-gateway:latest
+minikube image load localhost:5000/api-gateway:latest
 kubectl apply -f ./api-gateway.yaml
 
 #docker build -t localhost:5000/tweetservice:latest .
