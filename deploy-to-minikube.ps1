@@ -33,10 +33,10 @@ kubectl apply -f ./kube/notifservice-deployment.yaml
 
 $frontPodName = $(kubectl get pods -l app=frontend -o jsonpath='{.items[0].metadata.name}')
 
-kubectl delete service frontend-service
-
-kubectl expose pod $frontPodName --type=NodePort --name=frontend-service
-minikube service frontend-service
+Write-Output "Write the following in this order"
+Write-Output "kubectl delete service frontend-service"
+Write-Output "kubectl expose pod $frontPodName --type=NodePort --name=frontend-service"
+Write-Output "minikube service frontend-service"
 
 #$minikubeIp = minikube ip
 #$nodePort = kubectl get svc frontend-service -o jsonpath='{.spec.ports[0].nodePort}'
