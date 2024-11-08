@@ -9,7 +9,7 @@ RUN rm -rf /app/dist /app/node_modules /app/.cache
 RUN npm run build
 RUN npm run serve
 
-# step 2: run with NGINX
+# step 2: run with NGINXi
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
