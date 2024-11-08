@@ -8,6 +8,7 @@
 #kubectl get nodes
 
 & minikube -p minikube docker-env | Invoke-Expression
+minikube image load registry:2
 
 minikube status
 
