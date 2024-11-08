@@ -5,7 +5,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build  # Adjust if using a different build command
+RUN rm -rf /app/dist /app/node_modules /app/.cache
+RUN npm run build
 
 # step 2: run with NGINX
 FROM nginx:alpine
