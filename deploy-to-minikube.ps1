@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Set Minikube's docker environment
-minikube delete
+#minikube delete
 
 minikube start --driver=docker
 
@@ -11,19 +11,19 @@ kubectl get nodes
 
 minikube status
 
-docker build -t localhost:5000/frontend:latest .
+#docker build -t localhost:5000/frontend:latest .
 minikube image load localhost:5000/frontend:latest
 kubectl apply -f ./kube/frontend-deployment.yaml   
 
-docker build -t localhost:5000/api-gateway:latest .
+#docker build -t localhost:5000/api-gateway:latest .
 minikube image load localhost:5000/api-gateway:latest
 kubectl apply -f ./kube/api-gateway.yaml
 
-docker build -t localhost:5000/tweetservice:latest .
+#docker build -t localhost:5000/tweetservice:latest .
 minikube image load localhost:5000/tweetservice:latest
 kubectl apply -f ./kube/tweetservice-deployment.yaml
 
-docker build -t localhost:5000/notifiservice:latest .
+#docker build -t localhost:5000/notifiservice:latest .
 minikube image load localhost:5000/notifiservice:latest
 kubectl apply -f ./kube/notifservice-deployment.yaml
 

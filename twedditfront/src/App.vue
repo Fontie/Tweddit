@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Tweet Something!!!</h1>
+    <h1>Final test before bed!!!</h1>
     <form @submit.prevent="postTweet">
       <input type="text" v-model="tweet" placeholder="What's on your mind?" />
       <button type="submit">Tweet</button>
