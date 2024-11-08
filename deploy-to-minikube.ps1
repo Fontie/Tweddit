@@ -13,6 +13,7 @@ minikube image load registry:2
 minikube status
 
 cd ./twedditfront
+Write-Output "Current path: $(Get-Location)"
 #docker build .
 #minikube image load localhost:5000/frontend:latest
 kubectl apply -f ./kube/frontend-deployment.yaml   
