@@ -6,7 +6,7 @@ COPY package*.json ./
 RUN npm install @vue/cli-service --save-dev
 RUN npm install
 COPY . .
-RUN npm run serve
+RUN npm run build
 
 # step 2: run with NGINXi
 FROM nginx:alpine
