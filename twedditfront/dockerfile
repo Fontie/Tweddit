@@ -6,7 +6,6 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 RUN rm -rf /app/dist /app/node_modules /app/.cache
-RUN npm run build
 RUN npm run serve
 
 # step 2: run with NGINXi
