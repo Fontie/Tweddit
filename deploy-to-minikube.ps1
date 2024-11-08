@@ -12,6 +12,8 @@ minikube image load registry:2
 
 minikube status
 
+kubectl delete pods --all
+
 cd ./kube
 #docker build .
 minikube image load localhost:5000/frontend:latest
