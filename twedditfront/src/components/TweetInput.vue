@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
     this.connection = new HubConnectionBuilder()
-      .withUrl('http://localhost:5001/notificationHub') // Adjust port if necessary
+      .withUrl('http://localhost:5002/notificationHub') // Adjust port if necessary
       .build();
 
     this.connection.on('ReceiveMessage', (message) => {

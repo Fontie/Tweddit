@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RabbitMQ.Client;
 using System.Text;
+using TweetService.Models;
 
 namespace TweetService.Controllers
 {
@@ -11,14 +12,18 @@ namespace TweetService.Controllers
         private const string QUEUE_NAME = "tweet_sent";
 
         [HttpPost]
-        public IActionResult PostTweet([FromBody] string tweet)
+        public IActionResult PostTweet([FromBody] TweetDto tweetDto)
         {
+
             // TODO:: Logic to save tweet in database
 
-            // Send message to RabbitMQ
-            SendToQueue(tweet);
 
             return Ok("Tweet posted successfully!");
+
+            // Send message to RabbitMQ
+            SendToQueue(tweetDto.Tweet);
+
+            
         }
 
         private void SendToQueue(string message)

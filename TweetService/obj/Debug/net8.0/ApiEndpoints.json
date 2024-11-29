@@ -8,21 +8,11 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "tweet",
-        "Type": "System.String",
+        "Name": "tweetDto",
+        "Type": "TweetService.Models.TweetDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TweetService.Controllers.TweetController",
-    "Method": "GetTweets",
-    "RelativePath": "api/tweets",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   }
 ]

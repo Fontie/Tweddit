@@ -1,57 +1,41 @@
 <template>
   <div id="app">
-    <h1>Test at school2!!!</h1>
-    <form @submit.prevent="postTweet">
-      <input type="text" v-model="tweet" placeholder="What's on your mind?" />
-      <button type="submit">Tweet</button>
-    </form>
+    <header>
+      <nav>
+        <router-link to="/tweet">Post a Tweet</router-link> |
+        <router-link to="/login">Login</router-link>
+        <router-link to="/register">register</router-link>
+      </nav>
+    </header>
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
-import { useToast } from "vue-toastification";
-
 export default {
-  data() {
-    return {
-      tweet: "", // Model to hold the tweet text
-    };
-  },
-  setup() {
-    const toast = useToast();
-    return { toast };
-  },
-  methods: {
-    async postTweet() {
-      if (!this.tweet) {
-        this.toast.error("Tweet cannot be empty");
-        return;
-      }
-
-      try {
-        const response = await fetch("http://localhost:5000/tweets", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(this.tweet),
-        });
-
-        if (response.ok) {
-          this.toast.success("Tweet posted successfully!");
-          this.tweet = ""; // Clear the input field
-        } else {
-          const error = await response.json();
-          this.toast.error("Failed to post tweet: " + error.message);
-        }
-      } catch (err) {
-        this.toast.error("An error occurred: " + err.message);
-      }
-    },
-  },
+  name: "App",
 };
 </script>
 
 <style>
-/* Add any styles as you like */
+/* Add global styles if needed */
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+nav a.router-link-active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+main {
+  padding: 2rem;
+}
 </style>
