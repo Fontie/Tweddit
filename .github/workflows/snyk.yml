@@ -66,7 +66,8 @@ jobs:
       - name: Install JDK for Java projects
         uses: actions/setup-java@v2
         with:
-          java-version: '19'
+          java-version: '19' # Specify the Java version you want to use
+          distribution: 'temurin' # Specify the Java distribution (e.g., temurin, zulu, adopt)
 
       - name: Run Snyk test for IdentityService
         run: |
