@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: localhost:5000/frontend:latest  # remember 2 spaces or crash!1!
+          image: drayma/tweddit-frontend:latest  # remember 2 spaces or crash!1!
           imagePullPolicy: IfNotPresent  
           ports:
             - containerPort: 80
