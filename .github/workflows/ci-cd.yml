@@ -6,7 +6,7 @@ on:
       - main  # Trigger on pushes to the 'main' branch
   pull_request:
     branches:
-      - main  # Trigger on pull requests to 'main'
+      - main  # Trigger on pull requests to 'main'1
 
 jobs:
   snyk_test:
