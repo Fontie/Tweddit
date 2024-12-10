@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using RabbitMQ.Client;
 using System.Text;
 using TweetService.Models;
+using TweetService.Services;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TweetService.Controllers
 {
@@ -9,19 +11,24 @@ namespace TweetService.Controllers
     [Route("api/tweets")]
     public class TweetController : ControllerBase
     {
-        private const string QUEUE_NAME = "tweet_sent";
+        private const string QUEUE_NAME = "tweets";
+        private readonly TweetServiceDB _tweetService;
+
+        public TweetController()
+        {
+            _tweetService = new TweetServiceDB();
+        }
 
         [HttpPost]
-        public IActionResult PostTweet([FromBody] TweetDto tweetDto)
+        public async Task<IActionResult> PostTweet([FromBody] TweetDto tweetDto)
         {
 
-            // TODO:: Logic to save tweet in database
-
+            await _tweetService.CreateTweetAsync(tweetDto);
 
             return Ok("Tweet posted successfully!");
 
             // Send message to RabbitMQ
-            SendToQueue(tweetDto.Tweet);
+            //SendToQueue(tweetDto.Tweet);
 
             
         }

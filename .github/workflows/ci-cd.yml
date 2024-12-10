@@ -9,6 +9,16 @@ on:
       - main  # Trigger on pull requests to 'main'
 
 jobs:
+  snyk_test:
+  stage: test
+  image: snyk/snyk-cli
+  script:
+    - snyk auth $SNYK_TOKEN
+    - snyk test
+    - snyk monitor
+  only:
+    - main
+
   build-and-push:
     runs-on: self-hosted  # GitHub Actions will run on an Ubuntu runner
 

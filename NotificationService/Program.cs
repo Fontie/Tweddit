@@ -18,7 +18,7 @@ var factory = new ConnectionFactory() { HostName = "localhost" };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
-channel.QueueDeclare(queue: "tweet_notifications", durable: false, exclusive: false, autoDelete: false, arguments: null);
+channel.QueueDeclare(queue: "tweets", durable: false, exclusive: false, autoDelete: false, arguments: null);
 
 // Set up the consumer
 var consumer = new EventingBasicConsumer(channel);
@@ -33,9 +33,9 @@ consumer.Received += async (model, ea) =>
 };
 
 // Start consuming messages
-channel.BasicConsume(queue: "tweet_sent", autoAck: true, consumer: consumer);
+channel.BasicConsume(queue: "tweet", autoAck: true, consumer: consumer);
 
-app.MapHub<NotificationHub>("/notificationHub"); // Ensure this matches your front-end connection
+app.MapHub<NotificationHub>("/notificationHub"); // WHY YOU NOt WORKING THOUGH?!?!??!
 
 app.Run();
 

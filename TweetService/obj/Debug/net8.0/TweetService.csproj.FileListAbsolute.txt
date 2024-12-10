@@ -101,3 +101,9 @@ C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService
 C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\obj\Debug\net8.0\TweetService.pdb
 C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\obj\Debug\net8.0\TweetService.genruntimeconfig.cache
 C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\obj\Debug\net8.0\ref\TweetService.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\DnsClient.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\Snappier.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\ZstdSharp.dll

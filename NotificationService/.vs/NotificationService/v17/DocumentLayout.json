@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\notificationservice\\notificationservice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|solutionrelative:notificationservice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\notificationservice\\services\\tweetnotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|solutionrelative:services\\tweetnotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|solutionrelative:hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD84C788-1430-4860-81A7-529B928F53AF}|NotificationService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "tweetNotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\Services\\tweetNotificationService.cs",
+              "RelativeDocumentMoniker": "Services\\tweetNotificationService.cs",
+              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\Services\\tweetNotificationService.cs",
+              "RelativeToolTip": "Services\\tweetNotificationService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T09:58:24.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "dockerfile",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\dockerfile",
               "RelativeDocumentMoniker": "dockerfile",
@@ -44,18 +57,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NotificationService",
-              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\NotificationService.csproj",
-              "RelativeDocumentMoniker": "NotificationService.csproj",
-              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\NotificationService.csproj",
-              "RelativeToolTip": "NotificationService.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-07T16:14:45.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "NotificationHub.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\Hubs\\NotificationHub.cs",
               "RelativeDocumentMoniker": "Hubs\\NotificationHub.cs",
@@ -68,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -76,8 +77,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:46:59.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T15:46:59.363Z"
             }
           ]
         }

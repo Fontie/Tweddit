@@ -1,3 +1,7 @@
+using MongoDB.Driver;
+using TweetService;
+using TweetService.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,6 +15,10 @@ builder.Services.AddCors(options =>
                .AllowAnyMethod();
     });
 });
+
+
+var listener = new RabbitMqListener();
+listener.StartListening();
 
 var app = builder.Build();
 
