@@ -4,6 +4,9 @@ FROM openjdk:19-jdk-slim
 # Set the working directory in the container
 WORKDIR /app
 
+# Make the jar file
+RUN mvn clean package
+
 # Copy the Maven build artifact (JAR file) into the container
 COPY target/*.jar babymonitor.jar
 
