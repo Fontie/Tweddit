@@ -24,15 +24,21 @@ jobs:
           npm install
 
       - name: Install Snyk CLI
-        run: npm install -g snyk
+        run: |
+          cd twedditfront
+          npm install -g snyk
 
       - name: Run Snyk test for Vue.js
-        run: snyk test
+        run: |
+          cd twedditfront
+          snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
       - name: Monitor Vue.js project
-        run: snyk monitor
+        run: |
+          cd twedditfront
+          snyk monitor
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
