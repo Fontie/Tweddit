@@ -39,31 +39,16 @@ jobs:
       # -----------------------
       # For .NET Projects
       # -----------------------
-      - name: Run Snyk test for tweetService
+      - name: Run Snyk test for TweetService
         run: |
           cd TweetService
           snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-      - name: Run Snyk test for .NET Project 2
-        run: |
-          cd path/to/dotnet-project-2
-          snyk test
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
-
-      - name: Run Snyk test for notificationService
+      - name: Run Snyk test for NotificationService
         run: |
           cd NotificationService
-          snyk test
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
-      - name: Run Snyk test for .NET Project 2
-        run: |
-          cd path/to/dotnet-project-2
           snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -71,15 +56,14 @@ jobs:
       # -----------------------
       # For Java Projects
       # -----------------------
-      - name: Run Snyk test for identityService
+      - name: Install JDK for Java projects
+        uses: actions/setup-java@v2
+        with:
+          java-version: '19'
+
+      - name: Run Snyk test for IdentityService
         run: |
           cd identityService
           snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          - name: Install JDK for Java projects
-        uses: actions/setup-java@v2
-        with:
-          java-version: '19'
-
-
