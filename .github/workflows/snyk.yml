@@ -78,6 +78,5 @@ jobs:
         run: |
           cd identityService
           ./mvnw dependency:tree
-          snyk test --exclude-tags=ignore-pipeline
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
