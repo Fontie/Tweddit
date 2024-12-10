@@ -69,9 +69,15 @@ jobs:
           java-version: '19' # Specify the Java version you want to use
           distribution: 'temurin' # Specify the Java distribution (e.g., temurin, zulu, adopt)
 
-      - name: Run Snyk test for IdentityService
+      # Grant execute permissions to mvnw
+      - name: Grant execute permissions for mvnw
+        run: chmod +x identityService/mvnw
+
+      # Run Snyk test for identityService
+      - name: Run Snyk test for identityService
         run: |
           cd identityService
+          ./mvnw dependency:tree
           snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
