@@ -14,22 +14,72 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Install Node.js (for example, if using Node.js project)
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+      # -----------------------
+      # For Vue.js Project (frontend)
+      # -----------------------
+      - name: Install dependencies for Vue.js
+        run: |
+          cd twedditfront
+          npm install
 
       - name: Install Snyk CLI
         run: npm install -g snyk
 
-      - name: Run Snyk test for vulnerabilities
+      - name: Run Snyk test for Vue.js
         run: snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-      - name: Monitor project with Snyk
+      - name: Monitor Vue.js project
         run: snyk monitor
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      # -----------------------
+      # For .NET Projects
+      # -----------------------
+      - name: Run Snyk test for tweetService
+        run: |
+          cd TweetService
+          snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Run Snyk test for .NET Project 2
+        run: |
+          cd path/to/dotnet-project-2
+          snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+
+      - name: Run Snyk test for notificationService
+        run: |
+          cd NotificationService
+          snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Run Snyk test for .NET Project 2
+        run: |
+          cd path/to/dotnet-project-2
+          snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      # -----------------------
+      # For Java Projects
+      # -----------------------
+      - name: Run Snyk test for identityService
+        run: |
+          cd identityService
+          snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          - name: Install JDK for Java projects
+        uses: actions/setup-java@v2
+        with:
+          java-version: '19'
+
+
