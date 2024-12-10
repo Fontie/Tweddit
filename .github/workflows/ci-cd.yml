@@ -74,10 +74,4 @@ jobs:
           push: true
           tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-notifiservice:latest
 
-      - name: Build and Push Identity Service Image
-        uses: docker/build-push-action@v5
-        with:
-          context: ./identityService
-          file: ./identityService/Dockerfile
-          push: true
-          tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-identityService:latest
+   
