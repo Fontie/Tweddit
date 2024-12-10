@@ -20,32 +20,50 @@ jobs:
     - main
 
   build-and-push:
-    runs-on: self-hosted  # GitHub Actions will run on an Ubuntu runner
+    name: Build and Push Docker Images
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v2
+      - name: Checkout the repository
+        uses: actions/checkout@v4
 
-    - name: Build Docker image for frontend
-      run: |
-        cd twedditfront
-        docker build --no-cache -t localhost:5000/frontend:latest .
-        docker push localhost:5000/frontend:latest
-    - name: Build Docker image for API Gateway
-      run: |
-        cd ApiGateway
-        docker build --no-cache -t localhost:5000/api-gateway:latest .
-        docker push localhost:5000/api-gateway:latest
-    - name: Build Docker image for tweet service
-      run: |
-        cd TweetService
-        docker build --no-cache -t localhost:5000/tweetservice:latest .
-        docker push localhost:5000/tweetservice:latest
-    - name: Build Docker image for notification service
-      run: |
-        cd NotificationService
-        docker build --no-cache -t localhost:5000/notifiservice:latest .
-        docker push localhost:5000/notifiservice:latest
-    - name: Deploy to kube
-      run: |
-        ./deploy-to-minikube.ps1
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CI_REGISTRY_USER }}  # Replace with your secret for Docker Hub username
+          password: ${{ secrets.CI_REGISTRY_PASSWORD }}  # Replace with your secret for Docker Hub password
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and Push Frontend Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./twedditfront
+          file: ./twedditfront/Dockerfile
+          push: true
+          tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-frontend:latest
+
+      - name: Build and Push API Gateway Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./ApiGateway
+          file: ./ApiGateway/Dockerfile
+          push: true
+          tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-api-gateway:latest
+
+      - name: Build and Push Tweet Service Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./TweetService
+          file: ./TweetService/Dockerfile
+          push: true
+          tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-tweetservice:latest
+
+      - name: Build and Push Notification Service Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./NotificationService
+          file: ./NotificationService/Dockerfile
+          push: true
+          tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-notifiservice:latest

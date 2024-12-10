@@ -3,39 +3,49 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      
-main  # Trigger on pushes to the 'main' branch
-pull_request:
-  branches:
-main  # Trigger on pull requests to 'main'
+      - main  # Trigger on pushes to the 'main' branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to 'main'1
 
 jobs:
+  snyk_test:
+  stage: test
+  image: snyk/snyk-cli
+  script:
+    - snyk auth $SNYK_TOKEN
+    - snyk test
+    - snyk monitor
+  only:
+    - main
+
   build-and-push:
-    runs-on: ubuntju-latest  # GitHub Actions will run on an Ubuntu runner
-fv
-    steps:d
-    
-name: Checkout the repository
-    uses: actions/checkout@v2
+    runs-on: self-hosted  # GitHub Actions will run on an Ubuntu runner
 
-    
-name: Set up Docker for local registry
-    run: 
-      # Set Docker environment to use your local registry (localhost:5000)
-      docker tag frontend:latest localhost:5000/frontend:latest
-      docker tag api-gateway:latest localhost:5000/api-gateway:latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
 
-    
-name: Build Docker image for frontend
-    run: |
-      docker build -t localhost:5000/frontend:latest ./frontend
-      docker push localhost:5000/frontend:latest  # Push image to local registry
-
-    
-name: Build Docker image for API Gateway
-    run: |
-      docker build -t localhost:5000/api-gateway:latest ./api-gateway
-      docker push localhost:5000/api-gateway:latest  # Push image to local registry
-
-
-      justsomething
+    - name: Build Docker image for frontend
+      run: |
+        cd twedditfront
+        docker build --no-cache -t localhost:5000/frontend:latest .
+        docker push localhost:5000/frontend:latest
+    - name: Build Docker image for API Gateway
+      run: |
+        cd ApiGateway
+        docker build --no-cache -t localhost:5000/api-gateway:latest .
+        docker push localhost:5000/api-gateway:latest
+    - name: Build Docker image for tweet service
+      run: |
+        cd TweetService
+        docker build --no-cache -t localhost:5000/tweetservice:latest .
+        docker push localhost:5000/tweetservice:latest
+    - name: Build Docker image for notification service
+      run: |
+        cd NotificationService
+        docker build --no-cache -t localhost:5000/notifiservice:latest .
+        docker push localhost:5000/notifiservice:latest
+    - name: Deploy to kube
+      run: |
+        ./deploy-to-minikube.ps1
