@@ -10,26 +10,31 @@ ignore:
   SNYK-DOTNET-MICROSOFTASPNETCOREWEBSOCKETS-72891:
     - '*':
         reason: None Given
-        expires: 2025-01-09T12:59:51.336Z
-        created: 2024-12-10T12:59:51.342Z
+        expires: 2025-01-09T13:03:30.071Z
+        created: 2024-12-10T13:03:30.077Z
   SNYK-DOTNET-MICROSOFTASPNETCOREWEBSOCKETS-72898:
     - '*':
         reason: None Given
-        expires: 2025-01-09T13:00:41.542Z
-        created: 2024-12-10T13:00:41.548Z
+        expires: 2025-01-09T13:03:47.144Z
+        created: 2024-12-10T13:03:47.150Z
   SNYK-DOTNET-NEWTONSOFTJSON-2774678:
     - '*':
         reason: None Given
-        expires: 2025-01-09T13:00:56.006Z
-        created: 2024-12-10T13:00:56.013Z
+        expires: 2025-01-09T13:03:59.493Z
+        created: 2024-12-10T13:03:59.498Z
   SNYK-DOTNET-SYSTEMTEXTENCODINGSWEB-1253267:
     - '*':
         reason: None Given
-        expires: 2025-01-09T13:01:18.346Z
-        created: 2024-12-10T13:01:18.352Z
+        expires: 2025-01-09T13:04:39.569Z
+        created: 2024-12-10T13:04:39.574Z
   SNYK-DOTNET-SYSTEMNETWEBSOCKETSWEBSOCKETPROTOCOL-7289:
     - '*':
         reason: None Given
-        expires: 2025-01-09T13:01:07.935Z
-        created: 2024-12-10T13:01:07.941Z
+        expires: 2025-01-09T13:04:19.886Z
+        created: 2024-12-10T13:04:19.891Z
+  SNYK-DOTNET-SYSTEMNETWEBSOCKETSWEBSOCKETPROTOCOL-72894:
+    - '*':
+        reason: None Given
+        expires: 2025-01-09T13:04:14.802Z
+        created: 2024-12-10T13:04:14.807Z
 patch: {}
