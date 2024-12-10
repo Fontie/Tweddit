@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\NotificationService.csproj": {}
+    "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\notificationservice\\NotificationService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\NotificationService.csproj": {
+    "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\notificationservice\\NotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\NotificationService.csproj",
+        "projectUniqueName": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\notificationservice\\NotificationService.csproj",
         "projectName": "NotificationService",
-        "projectPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\NotificationService.csproj",
+        "projectPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\notificationservice\\NotificationService.csproj",
         "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\NotificationService\\obj\\",
+        "outputPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\notificationservice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,6 +58,14 @@
               "target": "Package",
               "version": "[1.1.0, )"
             },
+            "Microsoft.AspNetCore.WebSockets": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[6.8.1, )"
@@ -65,6 +73,14 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Net.WebSockets.WebSocketProtocol": {
+              "target": "Package",
+              "version": "[4.5.3, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [
