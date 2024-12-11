@@ -30,4 +30,5 @@ spec:
     - protocol: TCP
       port: 5001
       targetPort: 5001
-  type: ClusterIP
+      nodePort: 30001  # Expose on Minikube's port 30001
+  type: NodePort  # Change to NodePort

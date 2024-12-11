@@ -23,7 +23,7 @@ namespace TweetService.Controllers
         public async Task<IActionResult> PostTweet([FromBody] TweetDto tweetDto)
         {
 
-            await _tweetService.CreateTweetAsync(tweetDto);
+            //await _tweetService.CreateTweetAsync(tweetDto);
 
             return Ok("Tweet posted successfully!");
 

@@ -28,6 +28,6 @@ spec:
     app: frontend
   ports:
     - protocol: TCP
-      port: 8180
-      targetPort: 51661
+      port: 5161
+      targetPort: 5161
   type: ClusterIP
