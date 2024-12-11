@@ -29,8 +29,6 @@ namespace TweetService.Controllers
 
             // Send message to RabbitMQ
             //SendToQueue(tweetDto.Tweet);
-
-            
         }
 
         private void SendToQueue(string message)
