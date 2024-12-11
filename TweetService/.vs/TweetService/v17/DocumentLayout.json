@@ -65,8 +65,7 @@
               "RelativeToolTip": "..\\NotificationService\\Program.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAQwCAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T09:53:45.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T09:53:45.098Z"
             },
             {
               "$type": "Document",
@@ -90,8 +89,7 @@
               "RelativeToolTip": "RabbitMQListener.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwBcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T22:30:10.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T22:30:10.297Z"
             },
             {
               "$type": "Document",
@@ -127,8 +125,7 @@
               "RelativeToolTip": "Controllers\\TweetController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:21:58.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T14:21:58.898Z"
             },
             {
               "$type": "Document",
@@ -138,7 +135,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T14:21:48.101Z",
               "EditorCaption": ""

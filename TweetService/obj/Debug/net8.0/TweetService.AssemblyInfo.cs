@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TweetService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b91c65f4dec512a8567a8ad67e8b0c1f90ed819")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97bdb7db0b260e4471450186e6178271b2a9f54b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TweetService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TweetService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

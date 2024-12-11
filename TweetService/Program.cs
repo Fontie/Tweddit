@@ -11,11 +11,11 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", builder =>
     {
-        builder.WithOrigins("http://localhost:8085")
-               .AllowAnyHeader()
-               .AllowAnyMethod();
+        //builder.WithOrigins("http://localhost:8085")
+        //       .AllowAnyHeader()
+        //       .AllowAnyMethod();
         
-        builder.allowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
     });
 });
 
