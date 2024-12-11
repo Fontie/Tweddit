@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: drayma/tweddit-gateway:latest # Updated to use the correct image
+        image: drayma/tweddit-api-gateway:latest 
         ports:
         - containerPort: 8085 # Updated to use port 8085
         env:

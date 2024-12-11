@@ -38,6 +38,8 @@ Write-Output "kubectl delete service frontend-service"
 Write-Output "kubectl expose pod $frontPodName --type=NodePort --name=frontend-service"
 Write-Output "minikube service frontend-service"
 
+
+
 #$minikubeIp = minikube ip
 #$nodePort = kubectl get svc frontend-service -o jsonpath='{.spec.ports[0].nodePort}'
 
