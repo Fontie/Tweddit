@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HAgxAguPCZ8=",
+  "dgSpecHash": "nPgMl0jN2Fw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\tweetservice\\TweetService.csproj",
+  "projectFilePath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\TweetService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.8\\microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",

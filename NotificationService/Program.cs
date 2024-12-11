@@ -14,6 +14,7 @@ builder.Services.AddSingleton<tweetNotificationService>(); // Register Notificat
 var app = builder.Build();
 
 // Set up RabbitMQ connection and message handling
+/*
 var factory = new ConnectionFactory() { HostName = "localhost" };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
@@ -32,8 +33,10 @@ consumer.Received += async (model, ea) =>
     await hubContext.Clients.All.SendAsync("ReceiveMessage", message);
 };
 
+
 // Start consuming messages
 channel.BasicConsume(queue: "tweet", autoAck: true, consumer: consumer);
+*/
 
 app.MapHub<NotificationHub>("/notificationHub"); // WHY YOU NOt WORKING THOUGH?!?!??!
 

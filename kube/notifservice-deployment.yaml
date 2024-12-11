@@ -15,7 +15,7 @@ spec:
       containers:
         - name: notifservice
           image: drayma/tweddit-notifiservice:latest  # remember 2 spaces or crash!1!
-          imagePullPolicy: IfNotPresent 
+          imagePullPolicy: Always 
           ports:
             - containerPort: 5002
 ---

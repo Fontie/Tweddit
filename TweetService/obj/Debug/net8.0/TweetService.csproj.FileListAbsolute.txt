@@ -107,3 +107,5 @@ C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService
 C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\SharpCompress.dll
 C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\Snappier.dll
 C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\Michael\Desktop\school\Semester 7\Code\Individueel\Tweddit\TweetService\bin\Debug\net8.0\Prometheus.AspNetCore.dll
