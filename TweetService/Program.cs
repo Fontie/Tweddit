@@ -22,8 +22,8 @@ builder.Services.AddCors(options =>
 });
 
 
-var listener = new RabbitMqListener();
-listener.StartListening();
+//var listener = new RabbitMqListener();
+//listener.StartListening();
 
 var app = builder.Build();
 
