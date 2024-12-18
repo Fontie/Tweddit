@@ -15,9 +15,13 @@ spec:
       containers:
         - name: tweetservice
           image: drayma/tweddit-tweetservice:latest
-          imagePullPolicy: Always 
+          imagePullPolicy: Always
           ports:
             - containerPort: 5001
+          env:                              # Fix the indentation here
+            - name: ASPNETCORE_URLS         # Properly align this
+              value: http://+:5001          # Properly align this
+
 ---
 apiVersion: v1
 kind: Service
