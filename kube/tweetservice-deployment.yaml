@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tweetservice
-          image: drayma/tweddit-tweetservice:latest  # remember 2 spaces or crash!1!
+          image: drayma/tweddit-tweetservice:latest
           imagePullPolicy: Always 
           ports:
             - containerPort: 5001
@@ -28,7 +28,7 @@ spec:
     app: tweetservice
   ports:
     - protocol: TCP
-      port: 5001
-      targetPort: 5001
-      nodePort: 30001  # Expose on Minikube's port 30001
-  type: NodePort  # Change to NodePort
+      port: 5001         # Port accessible within the cluster
+      targetPort: 5001   # The container's exposed port
+      nodePort: 30001    # Fixed NodePort exposed on Minikube
+  type: NodePort          # Exposes the service outside of the cluster

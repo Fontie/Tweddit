@@ -16,7 +16,7 @@ kubectl delete pods --all
 
 cd ./kube
 #docker build .
-minikube image load localhost:5000/frontend:latest
+minikube image load frontend:latest
 kubectl apply -f ./frontend-deployment.yaml   
 
 #docker build -t localhost:5000/api-gateway:latest .
