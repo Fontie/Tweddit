@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: drayma/tweddit-frontend:latest  # remember 2 spaces or crash!1!
+          image: drayma/tweddit-frontend:latest
           imagePullPolicy: Always  
           ports:
-            - containerPort: 80
+            - containerPort: 4173   # Port the container exposes (matching service)
 ---
 apiVersion: v1
 kind: Service
@@ -28,6 +28,7 @@ spec:
     app: frontend
   ports:
     - protocol: TCP
-      port: 5161
-      targetPort: 5161
-  type: ClusterIP
+      port: 4173         # Port accessible within the cluster
+      targetPort: 80   # The container's exposed port
+      nodePort: 30002    # Port to expose outside the cluster
+  type: NodePort

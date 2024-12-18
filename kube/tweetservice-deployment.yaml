@@ -35,4 +35,4 @@ spec:
       port: 5001         # Port accessible within the cluster
       targetPort: 5001   # The container's exposed port
       nodePort: 30001    # Fixed NodePort exposed on Minikube
-  type: NodePort          # Exposes the service outside of the cluster
+  type: NodePort          
