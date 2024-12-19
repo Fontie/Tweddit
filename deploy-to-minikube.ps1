@@ -1,5 +1,7 @@
 #!/bin/bash
 
+minikube start
+
 minikube status
 
 cd ./kube
