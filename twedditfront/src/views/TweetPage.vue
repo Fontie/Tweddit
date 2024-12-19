@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Post a Tweet, but now with ci/cd</h1>
+    <h1>Post a Tweet, OR ELSE!!!</h1>
     <form @submit.prevent="postTweet">
       <input type="text" v-model="tweet" placeholder="What's on your mind?" />
       <button type="submit">Tweet 2</button>
@@ -38,10 +38,11 @@ export default {
       };
 
       try {
-        // Send POST request to the backend API
+        // Send POST request to the backend API 
         //const response = await axios.post("http://localhost:8085/api/tweets", tweetData);
-        const response = await axios.post("http://tweetservice:5001/api/tweets", tweetData);
+        //const response = await axios.post("http://tweetservice:5001/api/tweets", tweetData); 
         //const response = await axios.post("http://localhost:5001/api/tweets", tweetData);
+        const response = await axios.post("http://192.168.99.100:30001/api/tweets", tweetData); 
 
         // Check if the response is successful
         if (response.status === 200) {

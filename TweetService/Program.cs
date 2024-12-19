@@ -30,7 +30,7 @@ var app = builder.Build();
 app.UseMetricServer(); // Exposes metrics at /metrics
 app.UseHttpMetrics();  // Collects HTTP request metrics
 
-// Example endpoint
+
 app.MapGet("/api/tweets", () => "New tweet made!!!");
 
 app.UseCors("AllowFrontend");
