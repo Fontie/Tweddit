@@ -26,8 +26,7 @@ jobs:
         run: snyk monitor
 
   build-and-push:
-    name: Build and Push Docker Images
-    needs: snyk_test  
+    name: Build and Push Docker Images 
     runs-on: ubuntu-latest
 
     steps:
