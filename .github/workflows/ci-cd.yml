@@ -76,7 +76,7 @@ jobs:
 
   Kubernetes:
     name: Run PowerShell script in Kubernetes job
-    runs-on: windows-latest  # Use Windows runner for PowerShell
+    runs-on: windows-latest  
 
     steps:
       - name: Checkout the repository
@@ -84,4 +84,4 @@ jobs:
 
       - name: Run PowerShell script
         run: |
-          pwsh -ExecutionPolicy Bypass -File ./deploy-to-minikube.ps1  # Use ExecutionPolicy to bypass any restrictions
+          pwsh -ExecutionPolicy Bypass -File ./deploy-to-minikube.ps1  
