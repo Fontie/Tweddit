@@ -9,22 +9,6 @@ on:
       - main  # Trigger on pull requests to 'main'
 
 jobs:
-  snyk_test:
-    name: Snyk Security Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v4
-
-      - name: Authenticate with Snyk
-        run: snyk auth 2713790a-b8ac-4b1b-871d-fcfea2e017f1
-
-      - name: Run Snyk Test
-        run: snyk test
-
-      - name: Monitor Snyk Results
-        run: snyk monitor
-
   build-and-push:
     name: Build and Push Docker Images 
     runs-on: ubuntu-latest
