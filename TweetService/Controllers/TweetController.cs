@@ -31,6 +31,14 @@ namespace TweetService.Controllers
             //SendToQueue(tweetDto.Tweet);
         }
 
+        [HttpGet("getTweets")]
+        public async Task<IActionResult> GetAllTweets()
+        {
+            //var tweets = await _tweetService.GetAllTweetsAsync();
+            //return Ok(tweets);
+            return Ok();
+        }
+
         private void SendToQueue(string message)
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };

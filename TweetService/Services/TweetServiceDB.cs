@@ -27,6 +27,21 @@
             await _tweetsCollection.InsertOneAsync(newTweet);
         }
 
+        public async Task<List<TweetDto>> GetAllTweetsAsync()
+        {
+            // Retrieve all documents from the database
+            var tweetDBs = await _tweetsCollection.Find(tweet => true).ToListAsync();
+
+            // Map each TweetDB to a TweetDto
+            var tweetDtos = tweetDBs.Select(tweetDB => new TweetDto
+            {
+                UserName = tweetDB.UserName,
+                Tweet = tweetDB.Content // Map Content from TweetDB to Tweet in TweetDto
+            }).ToList();
+
+            return tweetDtos;
+        }
+
         public async Task HandleDeletedUserAsync(string userName)
         {
             var filter = Builders<TweetDB>.Filter.Eq(t => t.UserName, userName);

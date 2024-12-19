@@ -32,5 +32,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TweetService.Controllers.TweetController",
+    "Method": "GetAllTweets",
+    "RelativePath": "api/tweets/getTweets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

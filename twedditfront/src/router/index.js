@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import TweetPage from '@/views/TweetPage.vue'; 
 import LoginPage from '@/views/LoginPage.vue'; 
 import RegisterPage from '@/views/RegisterPage.vue'; 
+import DashboardPage from '@/views/DashboardPage.vue';
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/register', // URL path for the page
     name: 'register',
     component: RegisterPage,
+  },
+  {
+    path: '/dash', // URL path for the page
+    name: 'dash',
+    component: DashboardPage,
   }
 ];
 
