@@ -1,6 +1,7 @@
 #!/bin/bash
 
 minikube start
+& minikube -p minikube docker-env | Invoke-Expression
 
 minikube status
 

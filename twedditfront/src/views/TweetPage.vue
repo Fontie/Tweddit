@@ -40,9 +40,9 @@ export default {
       try {
         // Send POST request to the backend API 
         //const response = await axios.post("http://localhost:8085/api/tweets", tweetData);
-        //const response = await axios.post("http://tweetservice:5001/api/tweets", tweetData); 
+        const response = await axios.post("http://tweetservice:5001/api/tweets", tweetData); 
         //const response = await axios.post("http://localhost:5001/api/tweets", tweetData);
-        const response = await axios.post("http://192.168.99.100:30001/api/tweets", tweetData); 
+        //const response = await axios.post("http://192.168.99.100:30001/api/tweets", tweetData); 
 
         // Check if the response is successful
         if (response.status === 200) {
