@@ -7,29 +7,12 @@
 
 #kubectl get nodes
 
-& minikube -p minikube docker-env | Invoke-Expression
-minikube image load registry:2
-
 minikube status
 
-kubectl delete pods --all
-
 cd ./kube
-#docker build .
-minikube image load frontend:latest
-kubectl apply -f ./frontend-deployment.yaml   
 
-#docker build -t localhost:5000/api-gateway:latest .
-minikube image load localhost:5000/api-gateway:latest
-kubectl apply -f ./api-gateway.yaml
-
-#docker build -t localhost:5000/tweetservice:latest .
-#minikube image load localhost:5000/tweetservice:latest
-kubectl apply -f ./tweetservice-deployment.yaml
-
-#docker build -t localhost:5000/notifiservice:latest .
-#minikube image load localhost:5000/notifiservice:latest
-kubectl apply -f ./notifservice-deployment.yaml
+kubectl delete -f .
+kubectl apply -f .
 
 $frontPodName = $(kubectl get pods -l app=frontend -o jsonpath='{.items[0].metadata.name}')
 

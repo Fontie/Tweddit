@@ -74,4 +74,13 @@ jobs:
           push: true
           tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-notifiservice:latest
 
+  Kubernetes:
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Run PowerShell script
+        run: |
+          pwsh -File deploy-to-minikube.ps1
+
    
