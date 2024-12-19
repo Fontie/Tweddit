@@ -27,6 +27,7 @@ jobs:
 
   build-and-push:
     name: Build and Push Docker Images
+    needs: snyk_test  
     runs-on: ubuntu-latest
 
     steps:
@@ -77,6 +78,7 @@ jobs:
   Kubernetes:
     name: Run PowerShell script in Kubernetes job
     runs-on: windows-latest  
+    needs: build-and-push  
 
     steps:
       - name: Checkout the repository
