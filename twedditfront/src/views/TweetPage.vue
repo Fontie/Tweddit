@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Post a Tweet</h1>
+    <h1>Post a Tweet, but now with ci/cd</h1>
     <form @submit.prevent="postTweet">
       <input type="text" v-model="tweet" placeholder="What's on your mind?" />
       <button type="submit">Tweet 2</button>
