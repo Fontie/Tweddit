@@ -6,7 +6,7 @@ on:
       - main  # Trigger on pushes to the 'main' branch
   pull_request:
     branches:
-      - main  # Trigger on pull requests to 'main'1
+      - main  # Trigger on pull requests to 'main'
 
 jobs:
   snyk_test:
@@ -75,12 +75,13 @@ jobs:
           tags: ${{ secrets.CI_REGISTRY_USER }}/tweddit-notifiservice:latest
 
   Kubernetes:
+    name: Run PowerShell script in Kubernetes job
+    runs-on: windows-latest  # Use Windows runner for PowerShell
+
     steps:
-      - name: Check out the repository
+      - name: Checkout the repository
         uses: actions/checkout@v3
 
       - name: Run PowerShell script
         run: |
-          pwsh -File deploy-to-minikube.ps1
-
-   
+          pwsh -ExecutionPolicy Bypass -File ./deploy-to-minikube.ps1  # Use ExecutionPolicy to bypass any restrictions
