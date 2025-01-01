@@ -3,6 +3,7 @@ import TweetPage from '@/views/TweetPage.vue';
 import LoginPage from '@/views/LoginPage.vue'; 
 import RegisterPage from '@/views/RegisterPage.vue'; 
 import DashboardPage from '@/views/DashboardPage.vue';
+import UserPage from '@/views/UserPage.vue';
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/dash', // URL path for the page
     name: 'dash',
     component: DashboardPage,
+  },
+  {
+    path: '/user', // URL path for the page
+    name: 'UserPage',
+    component: UserPage,
   }
 ];
 

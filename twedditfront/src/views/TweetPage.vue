@@ -31,17 +31,40 @@ export default {
         return;
       }
 
+      // Get the token from localStorage
+      const token = localStorage.getItem('token');
+
+      let name = 'Anon'; // Default to an empty string in case the token is missing or invalid
+
+      if (token) {
+          try {
+              // Extract the payload
+              const payloadBase64 = token.split('.')[1];
+              const decodedPayload = atob(payloadBase64);
+              const payload = JSON.parse(decodedPayload);
+
+              // Get the 'name' field from the payload
+              name = payload.preferred_username || ''; // Use a fallback in case 'name' is undefined
+          } catch (error) {
+              console.error('Error decoding JWT:', error);
+          }
+      } else {
+          console.warn('No token found in localStorage');
+      }
+      
+      
       // Prepare the payload
       const tweetData = {
         Tweet: this.tweet, // Matching the TweetDto structure
-        UserName: "JohnDoe", // You can dynamically get the username if needed
+        UserName: name, // You can dynamically get the username if needed
       };
 
+      console.log(tweetData);
       try {
         // Send POST request to the backend API 
         //const response = await axios.post("http://localhost:8085/api/tweets", tweetData);
-        const response = await axios.post("http://tweetservice:5001/api/tweets", tweetData); 
-        //const response = await axios.post("http://localhost:5001/api/tweets", tweetData);
+        //const response = await axios.post("http://tweetservice:5001/api/tweets", tweetData); 
+        const response = await axios.post("http://localhost:5001/api/tweets", tweetData);
         //const response = await axios.post("http://192.168.99.100:30001/api/tweets", tweetData); 
 
         // Check if the response is successful

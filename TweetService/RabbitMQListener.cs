@@ -7,34 +7,38 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TweetService.Services;
-
+using Microsoft.Extensions.Hosting;
 
 namespace TweetService
 {
-    public class RabbitMqListener
+    public class RabbitMqListener : IHostedService
     {
         private readonly string _queueName = "deletedUser";
         private readonly TweetServiceDB _tweetService;
+        private IConnection _connection;
+        private IModel _channel;
 
-        public RabbitMqListener()
+        public RabbitMqListener(TweetServiceDB tweetService)
         {
-            _tweetService = new TweetServiceDB();
+            _tweetService = tweetService;
         }
 
-        public void StartListening()
+        public Task StartAsync(CancellationToken cancellationToken)
         {
-            var factory = new ConnectionFactory() { 
+            var factory = new ConnectionFactory()
+            {
                 HostName = "localhost",
-                Port = 5672,          
-                UserName = "guest",    
-                Password = "guest"     
+                Port = 5672,
+                UserName = "guest",
+                Password = "guest"
             };
-            using var connection = factory.CreateConnection();
-            using var channel = connection.CreateModel();
 
-            channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+            _connection = factory.CreateConnection();
+            _channel = _connection.CreateModel();
 
-            var consumer = new EventingBasicConsumer(channel);
+            _channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+
+            var consumer = new EventingBasicConsumer(_channel);
             consumer.Received += async (model, ea) =>
             {
                 var body = ea.Body.ToArray();
@@ -45,14 +49,18 @@ namespace TweetService
                 await _tweetService.HandleDeletedUserAsync(message);
             };
 
-            channel.BasicConsume(queue: _queueName, autoAck: true, consumer: consumer);
+            _channel.BasicConsume(queue: _queueName, autoAck: true, consumer: consumer);
 
             Console.WriteLine("Listening for messages...");
 
-            // Keep the connection alive
-            Thread.Sleep(Timeout.Infinite);
+            return Task.CompletedTask;
         }
 
-        
+        public Task StopAsync(CancellationToken cancellationToken)
+        {
+            _channel.Close();
+            _connection.Close();
+            return Task.CompletedTask;
+        }
     }
 }

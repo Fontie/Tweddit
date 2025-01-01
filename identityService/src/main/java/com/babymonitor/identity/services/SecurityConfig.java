@@ -25,7 +25,7 @@ public class SecurityConfig {
                 .csrf()
                     .disable()
                 .authorizeHttpRequests()
-                    .requestMatchers("/identity/register", "/identity/login")  // Specifieke endpoint toestaan
+                    .requestMatchers("/identity/register", "/identity/login", "/identity/delete")  // Specifieke endpoint toestaan
                         .permitAll()
                     .anyRequest()
                         .authenticated();

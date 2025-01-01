@@ -10,6 +10,7 @@ import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import org.keycloak.admin.client.resource.UserResource;
 import javax.ws.rs.core.Response;
 import java.util.Collections;
 
@@ -42,6 +43,24 @@ public class UserCreation {
                 .password(userPassword)
                 .grantType(OAuth2Constants.PASSWORD)
                 .build();
+    }
+
+    public String deleteUser(String userId) {
+        try {
+            Keycloak keycloak = getKeycloakClient();
+            RealmResource realmResource = keycloak.realm(realm);
+            String cleanedUserId = userId.replaceAll("=+$", "").trim();
+            UserResource userResource = realmResource.users().get(cleanedUserId);
+
+            String nameSpecial = "fail";
+            nameSpecial = userResource.toRepresentation().getUsername(); //getAttributes().get("preferred_username").get(0);
+
+            userResource.remove();
+            return nameSpecial;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "fail";
+        }
     }
 
     public String createUser(String username, String email, String password) {

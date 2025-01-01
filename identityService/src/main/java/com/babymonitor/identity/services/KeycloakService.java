@@ -38,6 +38,7 @@ public class KeycloakService {
 
     private Keycloak keycloak;
 
+
     public String assignRoleToUser(RoleAssigning roleAssigning, HttpServletRequest request) {
         try {
             String token = extractBearerToken(request);

@@ -2,6 +2,7 @@
   <div id="app">
     <header>
       <nav>
+        <router-link to="/user">User</router-link>
         <router-link to="/tweet">Post a Tweet</router-link> |
         <router-link to="/dash">Dashboard</router-link>
         <router-link to="/login">Login</router-link>

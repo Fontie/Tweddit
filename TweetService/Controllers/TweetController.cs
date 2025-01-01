@@ -23,20 +23,19 @@ namespace TweetService.Controllers
         public async Task<IActionResult> PostTweet([FromBody] TweetDto tweetDto)
         {
 
-            //await _tweetService.CreateTweetAsync(tweetDto);
+            await _tweetService.CreateTweetAsync(tweetDto);
 
             return Ok("Tweet posted successfully!");
 
             // Send message to RabbitMQ
-            //SendToQueue(tweetDto.Tweet);
+            SendToQueue(tweetDto.Tweet);
         }
 
         [HttpGet("getTweets")]
         public async Task<IActionResult> GetAllTweets()
         {
-            //var tweets = await _tweetService.GetAllTweetsAsync();
-            //return Ok(tweets);
-            return Ok();
+            var tweets = await _tweetService.GetAllTweetsAsync();
+            return Ok(tweets);
         }
 
         private void SendToQueue(string message)

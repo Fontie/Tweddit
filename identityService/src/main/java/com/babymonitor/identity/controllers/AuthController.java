@@ -3,6 +3,8 @@ package com.babymonitor.identity.controllers;
 import com.babymonitor.identity.models.LoginRequest;
 import com.babymonitor.identity.models.User;
 import com.babymonitor.identity.models.UserDTO;
+import com.babymonitor.identity.RabbitMQConfig;
+import com.babymonitor.identity.RabbitMQSender;
 import com.babymonitor.identity.services.JwtAuthConverter;
 import com.babymonitor.identity.services.JwtTokenProvider;
 import com.babymonitor.identity.services.KeycloakService;
@@ -33,7 +35,11 @@ public class AuthController {
 
     private JwtTokenProvider jwtTokenProvider;
 
+    @Autowired
+    private RabbitMQSender rabbitMQSender;
+
     private final UserCreation userCreation;
+
 
     @Autowired
     private KeycloakService keycloakService;
@@ -54,8 +60,22 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) {
         String userId = userCreation.createUser(userDTO.getUsername(), userDTO.getEmail(), userDTO.getPassword());
-            if (userId != null) {
+        if (userId != null) {
+            //  rabbitMQSender.sendDeletedUserMessage("deletedUser: " + userId);
             return ResponseEntity.ok("User created with ID: " + userId);
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error creating user");
+        }
+    }
+
+    @PostMapping("/delete")
+    public ResponseEntity<String> deleteUser(@RequestBody String userID) {
+
+        String deletionSuc = userCreation.deleteUser(userID);
+        if (deletionSuc != "fail")
+        {
+            rabbitMQSender.sendDeletedUserMessage(deletionSuc);
+            return ResponseEntity.ok("User deleted" );
         } else {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error creating user");
         }
