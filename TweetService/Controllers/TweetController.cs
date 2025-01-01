@@ -4,6 +4,11 @@ using System.Text;
 using TweetService.Models;
 using TweetService.Services;
 using static System.Net.Mime.MediaTypeNames;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 
 namespace TweetService.Controllers
 {
@@ -13,6 +18,7 @@ namespace TweetService.Controllers
     {
         private const string QUEUE_NAME = "tweets";
         private readonly TweetServiceDB _tweetService;
+        private static readonly HttpClient client = new HttpClient();
 
         public TweetController()
         {
@@ -36,6 +42,35 @@ namespace TweetService.Controllers
         {
             var tweets = await _tweetService.GetAllTweetsAsync();
             return Ok(tweets);
+        }
+
+        [HttpGet("getCat")]
+        public async Task<IActionResult> GetCat()
+        {
+            var Cat = "No Cats found";
+
+            try
+            {
+                // URL of the Azure Function (replace with your actual URL)
+                string functionUrl = "https://catfunction.azurewebsites.net/api/RandomCat?";
+
+                // Send a GET request to the Azure Function
+                HttpResponseMessage response = await client.GetAsync(functionUrl);
+
+                // Ensure we got a successful response
+                response.EnsureSuccessStatusCode();
+
+                // Read the response content as a string
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                Cat = responseBody;
+            }
+            catch (HttpRequestException e)
+            {
+                Cat = "Catch error";
+            }
+
+            return Ok(Cat);
         }
 
         private void SendToQueue(string message)

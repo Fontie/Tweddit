@@ -12,8 +12,12 @@
 
         public TweetServiceDB()
         {
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("TwedditTweet");
+            string connectionUrl = "mongodb+srv://446633:446633@tweddit.9tfwh.mongodb.net/?retryWrites=true&w=majority&appName=tweddit";
+            var settings = MongoClientSettings.FromConnectionString(connectionUrl);
+
+
+            var client = new MongoClient(settings);
+            var database = client.GetDatabase("tweddit");
             _tweetsCollection = database.GetCollection<TweetDB>("Tweets");
         }
 

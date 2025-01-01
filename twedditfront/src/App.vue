@@ -5,6 +5,7 @@
         <router-link to="/user">User</router-link>
         <router-link to="/tweet">Post a Tweet</router-link> |
         <router-link to="/dash">Dashboard</router-link>
+        <router-link to="/cat">Get a random cat</router-link>
         <router-link to="/login">Login</router-link>
         <router-link to="/register">register</router-link>
       </nav>

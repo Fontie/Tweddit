@@ -4,6 +4,7 @@ import LoginPage from '@/views/LoginPage.vue';
 import RegisterPage from '@/views/RegisterPage.vue'; 
 import DashboardPage from '@/views/DashboardPage.vue';
 import UserPage from '@/views/UserPage.vue';
+import CatPage from '@/views/CatPage.vue';
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/user', // URL path for the page
     name: 'UserPage',
     component: UserPage,
+  },
+  {
+    path: '/cat', // URL path for the page
+    name: 'CatPage',
+    component: CatPage,
   }
 ];
 
