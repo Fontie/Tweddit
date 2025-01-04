@@ -19,8 +19,8 @@ builder.Services.AddCors(options =>
 });
 
 // Register TweetServiceDB and RabbitMqListener as background services
-builder.Services.AddSingleton<TweetServiceDB>();
-builder.Services.AddHostedService<RabbitMqListener>();
+//builder.Services.AddSingleton<TweetServiceDB>();
+//builder.Services.AddHostedService<RabbitMqListener>();
 
 var app = builder.Build();
 
