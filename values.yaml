@@ -1,0 +1,23 @@
+USER-SUPPLIED VALUES:
+null
+
+prometheus:
+  prometheusSpec:
+    additionalScrapeConfigs:
+      - job_name: 'tweetservice'
+        kubernetes_sd_configs:
+          - role: pod
+            namespaces:
+              names:
+                - default  # Replace with the namespace where your .NET app is running
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_pod_label_app]
+            target_label: app
+          - source_labels: [__meta_kubernetes_namespace]
+            target_label: namespace
+          - source_labels: [__meta_kubernetes_pod_name]
+            target_label: pod_name
+        metrics_path: /metrics  # The endpoint where your .NET app exposes Prometheus metrics
+        scheme: http
+        static_configs:
+          - targets: ['tweetservice:5001']  # Replace with your service name and port

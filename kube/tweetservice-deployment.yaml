@@ -21,6 +21,11 @@ spec:
           env:                              # Fix the indentation here
             - name: ASPNETCORE_URLS         # Properly align this
               value: http://+:5001          # Properly align this
+          resources:                       # Add resource requests and limits
+            requests:
+              cpu: "50m"                   # Minimum CPU the pod requires
+            limits:
+              cpu: "200m"                  # Maximum CPU the pod can use
 
 ---
 apiVersion: v1

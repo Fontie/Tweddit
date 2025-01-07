@@ -23,12 +23,12 @@ namespace TweetService.Controllers
         public async Task<IActionResult> PostTweet([FromBody] TweetDto tweetDto)
         {
 
-           // await _tweetService.CreateTweetAsync(tweetDto);
-
+            // await _tweetService.CreateTweetAsync(tweetDto);
+            SendToQueue(tweetDto.Tweet);
             return Ok("Tweet posted successfully!");
 
             // Send message to RabbitMQ
-          //  SendToQueue(tweetDto.Tweet);
+            SendToQueue(tweetDto.Tweet);
         }
 
         [HttpGet("getTweets")]
@@ -40,7 +40,14 @@ namespace TweetService.Controllers
 
         private void SendToQueue(string message)
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() 
+            {
+                HostName = "goose-01.rmq2.cloudamqp.com",
+                UserName = "avmhfhvr",
+                Password = "b7r4rrHismmRWgCZFWFRVPtfCkrEZcjx",
+                VirtualHost = "avmhfhvr",
+                Port = 5672 
+            };
             
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
