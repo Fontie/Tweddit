@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\tweetservice\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|solutionrelative:rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|c:\\users\\michael\\desktop\\school\\semester 7\\code\\individueel\\tweddit\\tweetservice\\controllers\\tweetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C83556D0-86BB-461E-A487-7D1CEE94ADE8}|TweetService.csproj|solutionrelative:controllers\\tweetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "RabbitMQListener.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\RabbitMQListener.cs",
+              "RelativeDocumentMoniker": "RabbitMQListener.cs",
+              "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\RabbitMQListener.cs",
+              "RelativeToolTip": "RabbitMQListener.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T13:20:07.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TweetDB.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Models\\TweetDB.cs",
               "RelativeDocumentMoniker": "Models\\TweetDB.cs",
@@ -54,12 +71,11 @@
               "RelativeToolTip": "Models\\TweetDB.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T19:13:56.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-01T19:13:56.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TweetDto.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Models\\TweetDto.cs",
               "RelativeDocumentMoniker": "Models\\TweetDto.cs",
@@ -67,12 +83,11 @@
               "RelativeToolTip": "Models\\TweetDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T19:13:54.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-01T19:13:54.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TweetServiceDB.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Services\\TweetServiceDB.cs",
               "RelativeDocumentMoniker": "Services\\TweetServiceDB.cs",
@@ -80,25 +95,24 @@
               "RelativeToolTip": "Services\\TweetServiceDB.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwBMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T19:12:38.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-01T19:12:38.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TweetController.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Controllers\\TweetController.cs",
               "RelativeDocumentMoniker": "Controllers\\TweetController.cs",
               "ToolTip": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Controllers\\TweetController.cs",
               "RelativeToolTip": "Controllers\\TweetController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwD4AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwFcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-01T17:45:57.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -110,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TweetService.http",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\TweetService.http",
               "RelativeDocumentMoniker": "TweetService.http",
@@ -122,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -134,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RabbitMQListener - Copy.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\school\\Semester 7\\Code\\Individueel\\Tweddit\\TweetService\\RabbitMQListener - Copy.cs",
               "RelativeDocumentMoniker": "RabbitMQListener - Copy.cs",

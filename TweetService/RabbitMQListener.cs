@@ -27,11 +27,13 @@ namespace TweetService
         {
             var factory = new ConnectionFactory()
             {
-                HostName = "localhost",
-                Port = 5672,
-                UserName = "guest",
-                Password = "guest"
+                HostName = "goose-01.rmq2.cloudamqp.com",
+                UserName = "avmhfhvr",
+                Password = "b7r4rrHismmRWgCZFWFRVPtfCkrEZcjx",
+                VirtualHost = "avmhfhvr",
+                Port = 5672
             };
+
 
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
